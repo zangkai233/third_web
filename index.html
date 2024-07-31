@@ -7,21 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-container">
+        <video autoplay muted loop id="background-video">
+            <source src="vedio2.mov" type="video/mp4">
+        </video>
+    </div>
+    
     <div class="login-container" id="login-container">
-        <div class="login-box">
-            <h2>登录</h2>
-            <form id="login-form">
-                <div class="input-group">
-                    <label for="username">用户名</label>
-                    <input type="text" id="username" required>
+        <div class="neon-box">
+            <div class="neon-border">
+                <div class="login-box">
+                    <h2>登录</h2>
+                    <form id="login-form">
+                        <div class="input-group">
+                            <label for="username">用户名</label>
+                            <input type="text" id="username" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">密码</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <button type="submit">登录</button>
+                    </form>
+                    <div id="login-error" class="error-message"></div>
                 </div>
-                <div class="input-group">
-                    <label for="password">密码</label>
-                    <input type="password" id="password" required>
-                </div>
-                <button type="submit">登录</button>
-            </form>
-            <div id="login-error" class="error-message"></div>
+            </div>
         </div>
     </div>
 
@@ -36,8 +46,8 @@
         </div>
 
         <div id="user-content">
-            <h1>欢迎来到猪屁蛋之家</h1>
-            <p>这句话只有真正的猪屁蛋才能看见</p>
+            <h1>欢迎来到我的 GitHub 页面</h1>
+            <p>这是一个简单的 HTML 页面，通过 GitHub Pages 部署。</p>
         </div>
     </div>
 
@@ -58,8 +68,8 @@
             if (username === 'zhaoyuzhu' && password === '20070223') {
                 document.getElementById('login-container').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
-                document.getElementById('user-content').innerHTML = '<h1>欢迎来到笨蛋之家</h1><p>只有真正的猪屁蛋才能看见这句话</p>';
-                addMenuItems(['飞飞', '竹竹', '赵猪猪', '猪屁蛋']);
+                document.getElementById('user-content').innerHTML = '<h1>欢迎来到我的 GitHub 页面</h1><p>这是一个简单的 HTML 页面，通过 GitHub Pages 部署。</p>';
+                addMenuItems(['首页', '关于', '服务', '联系']);
             } else if (username === 'shabi' && password === '19491001') {
                 document.getElementById('login-container').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
